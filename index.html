@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link type="text/css" rel="stylesheet" href="css/style.css" />
+    <link href='https://fonts.googleapis.com/css?family=Lato:100' rel='stylesheet' type='text/css'>
+    <script type="text/javascript" src="js/isMobile.min.js"></script>
+    <script type="module" src="js/equinaut.js"></script>
+  </head>
+  <body>
+    <div id="loading_overlay">
+      <div class="load-spinner">
+        <div></div>
+        <div></div>
+      </div>
+    </div>
+    <div id="error_overlay">
+      ERROR: Unable to load EQR pano
+    </div>
+    <div id="mobile_overlay">
+      <button id="mobile_start_btn">Start Mobile</button>
+    </div>
+    <div id="app_container"></div>
+    <div id="settings_container" class="closed">
+      <div id="settings_content">
+      </div>
+    </div>
+    <div id="title_div">
+      <div id="title_img_div">
+        <a href="#" target="_new" id="title_link">
+        <img id="title_img" src="img/sl.png">
+        </a>
+      </div>
+      <div id="title_text_div"></div>
+    </div>
+    <div id="btn_container">
+      <div id="settings_btn">
+        <img src="img/settings.png">
+      </div>
+      <div id="full_screen_btn">
+        <img src="img/full_screen.png">
+      </div>
+      <div id="help_btn">
+        <img src="img/help.png">
+      </div>
+    </div>
+  </body>
+</html>
