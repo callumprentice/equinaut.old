@@ -21,14 +21,12 @@ mkdir -p site/panos
 cp -R ../panos/* ./site/panos/
 
 cp ~/work/callum/web/web-sandbox/panos/*.jpg ./site/panos
-#menu_name=$(uuidgen).html
 menu_name=menu.html
-echo 'menu HTML is '$menu_name
+
+python3 gen_menu.py --mode publish
 
 cp ../index.html ./site/
-cp ../menu.html ./site/
 cp ../favicon.ico ./site/
-
 cp .surgeignore ./site
 
 surge teardown https://equinaut.surge.sh
