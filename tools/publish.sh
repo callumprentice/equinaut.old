@@ -36,8 +36,6 @@ cp ./site/index.html ./site/index.orig
 
 sed -i -e "s/equinaut.js/equinaut.min.js/g" ./site/index.html
 
-exit
-
 surge teardown https://equinaut.surge.sh
 
 surge --domain https://equinaut.surge.sh --project ./site
