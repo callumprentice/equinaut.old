@@ -29,13 +29,16 @@ cp ../index.html ./site/
 cp ../favicon.ico ./site/
 cp .surgeignore ./site
 
-surge teardown https://equinaut.surge.sh
-
-curl -X POST -s --data-urlencode 'input@site/js/equinaut.js' https://javascript-minifier.com/raw > ./site/js/equinaut.min.js
+echo "// Visit https://github.com/callumprentice/equinaut/blob/master/README.md for source, information, license etc." > ./site/js/equinaut.min.js
+curl -X POST -s --data-urlencode 'input@site/js/equinaut.js' https://javascript-minifier.com/raw >> ./site/js/equinaut.min.js
 
 cp ./site/index.html ./site/index.orig
 
 sed -i -e "s/equinaut.js/equinaut.min.js/g" ./site/index.html
+
+exit
+
+surge teardown https://equinaut.surge.sh
 
 surge --domain https://equinaut.surge.sh --project ./site
 
